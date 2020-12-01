@@ -366,6 +366,7 @@ ol,
 dl,
 blockquote {
   margin: 0 0 1.5em 0;
+  color: white; /*Dark theme added */
 }
 
 ol,
@@ -463,6 +464,7 @@ h6 {
   line-height: 1.15;
   font-weight: 700;
   text-rendering: optimizeLegibility;
+  color: white; /*Dark theme added */
 }
 
 h1 {
@@ -523,6 +525,7 @@ h6 {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  background: black; /*dark-theme*/
 }
 
 .container {
@@ -546,7 +549,8 @@ h6 {
 .post-full-content {
   max-width: 720px;
   margin: 0 auto;
-  background: #fff;
+  background: black; /*dark-theme*/
+  color: white; /*Dark theme added */
 }
 
 .post-full-content figcaption {
@@ -587,6 +591,7 @@ h6 {
 .content-title {
   margin: 0 0 0.8em;
   font-size: 5rem;
+  color: white; /*Dark theme added */
 }
 @media (max-width: 500px) {
   .content-title {
@@ -774,6 +779,8 @@ h6 {
 
 .site-main {
   padding: 4vw 0;
+  background: black; /*dark-theme*/
+  color: white; /*Dark theme added */
 }
 
 /* Index
@@ -821,6 +828,7 @@ h6 {
 .post-card-title {
   margin: 0 0 10px 0;
   padding: 0;
+  color: white; /*Dark theme added */
 }
 
 .post-card-excerpt {
