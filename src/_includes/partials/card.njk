@@ -1,0 +1,50 @@
+{% macro card(post, index) %}
+    <article class="post-card{% if post.feature_image %}{% else %} no-image{% endif %} post-index-{{ index }}{{ ' post-card-large' if (index % 6 == 0) and (post.feature_image) }}">
+        {% if post.feature_image %}
+            <a class="post-card-image-link" href="{{ post.url }}">
+                <img class="post-card-image" src="{{ post.feature_image }}" alt="{{ post.title }}" />
+            </a>
+        {% endif %}
+
+        <div class="post-card-content">
+
+            <a class="post-card-content-link" href="{{ post.url }}">
+
+                <header class="post-card-header">
+                    {% if post.primary_tag %}
+                        <div class="post-card-primary-tag">{{ post.primary_tag.name }}</div>
+                    {% endif %}
+                    <h2 class="post-card-title">{{ post.title }}</h2>
+                </header>
+
+                <section class="post-card-excerpt">
+                    {% if post.feature_image %}
+                        <p>{% excerpt post.excerpt %}</p>
+                    {% endif %}
+                </section>
+
+            </a>
+
+            <footer class="post-card-meta">
+                <ul class="author-list">
+                    <li class="author-list-item">
+                        <div class="author-name-tooltip">
+                            {{ post.primary_author.name }}
+                        </div>
+                        <a href="/author/{{ post.primary_author.slug }}/" class="static-avatar">
+                            <img
+                                class="author-profile-image"
+                                src="{{ post.primary_author.profile_image }}"
+                                alt="{{ post.primary_author.name }}" />
+                        </a>
+                    </li>
+                </ul>
+                <div class="post-card-byline-content">
+                    <span><a href="/author/{{ post.primary_author.slug }}/">{{ post.primary_author.name }}</a></span>
+                    <span class="post-card-byline-date"><time datetime="{% formatDate post.published_at, "ISO" %}">{% formatDate post.published_at, "D MMM YYYY" %}</time> <span class="bull">&bull;</span> {{ post.html | safe | getReadingTime }} min read</span>
+                </div>
+            </footer>
+
+        </div>
+    </article>
+{% endmacro %}
