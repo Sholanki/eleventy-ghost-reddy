@@ -69,7 +69,7 @@
                     {% endblock %}
                 </div>
             </main>
-			<div id="ghost-membersjs-root"><iframe srcdoc="{% set html %} {{ iframe.html | safe }}  {% endset %}" class="gh-portal-triggerbtn-iframe" title="membersjs-trigger" frameborder="0" style="z-index: 3999998; position: fixed; bottom: 0px; right: 0px; width: 185px; max-width: 500px; height: 98px; animation: 250ms ease 0s 1 normal none running animation-bhegco; transition: opacity 0.3s ease 0s; overflow: hidden;"></iframe></div>
+			<div id="ghost-membersjs-root"><iframe src="{% set html %} {{ iframe.html | safe }}  {% endset %}" class="gh-portal-triggerbtn-iframe" title="membersjs-trigger" frameborder="0" style="z-index: 3999998; position: fixed; bottom: 0px; right: 0px; width: 185px; max-width: 500px; height: 98px; animation: 250ms ease 0s 1 normal none running animation-bhegco; transition: opacity 0.3s ease 0s; overflow: hidden;"></iframe></div>
 
             {% include "partials/footer.njk" %}
             {% include "partials/subscribe.njk" %}
