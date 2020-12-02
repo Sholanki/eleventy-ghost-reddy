@@ -70,7 +70,7 @@
                 </div>
             </main>
 			<div>
-			{{ iframe.html | safe }}
+			{% extends "iframe.html" %}
 			</div>
 
             {% include "partials/footer.njk" %}
