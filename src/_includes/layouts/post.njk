@@ -92,47 +92,9 @@
         </section>
 
     </article>
-
-<aside class="read-next outer">
-    <div class="inner">
-        <div class="read-next-feed">
-            {% if post.primary_tag %}
-             <section class="post-full-tags">
-                    <a href="/tag/{{ post.primary_tag.slug }}/">{{ post.primary_tag.name }}</a>
-                </section>
-            {% endif %}
-			{% if post.related_posts %}
-                <article class="read-next-card">
-                    <header class="read-next-card-header">
-                        {% for primary_tag in post.primary_tag %}
-                        <h3><span>More in</span> <a href="{{url}}">{{name}}</a></h3>
-                        {% endfor %}
-                    </header>
-                    <div class="read-next-card-content">
-                        <ul>
-						{% for related_posts in post.related_posts %}
-                            
-                            <li>
-                                <h4><a href="{{url}}">{{title}}</a></h4>
-                                <div class="read-next-card-meta">
-                                    
-                                </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <footer class="read-next-card-footer">
-                        
-                    </footer>
-                </article>
-                {% endif %}
-           
-           
-		   </div>
-		   </div>
-		   </aside>
-		   
 {% endblock %}
+
+
 
 {%- block seo -%}
     <!-- Facebook OpenGraph -->
