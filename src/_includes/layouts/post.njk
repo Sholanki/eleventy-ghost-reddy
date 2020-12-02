@@ -94,6 +94,50 @@
     </article>
 {% endblock %}
 
+{% block content %}
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            {% if post.primary_tag %}
+             <section class="post-full-tags">
+                    <a href="/tag/{{ post.primary_tag.slug }}/">{{ post.primary_tag.name }}</a>
+                </section>
+            {% endif %}
+			{% if post.related_posts %}
+                <article class="read-next-card">
+                    <header class="read-next-card-header">
+                        {{#../primary_tag}}
+                        <h3><span>More in</span> <a href="{{url}}">{{name}}</a></h3>
+                        {{/../primary_tag}}
+                    </header>
+                    <div class="read-next-card-content">
+                        <ul>
+						{% for related_posts in post.related_posts %}
+                            
+                            <li>
+                                <h4><a href="{{url}}">{{title}}</a></h4>
+                                <div class="read-next-card-meta">
+                                    <p><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> –
+                                        {{reading_time}}</p>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='See all % posts'}}
+                            →</a>
+                    </footer>
+                </article>
+                {% endif %}
+           
+           {% endif %}
+		   </div>
+		   </div>
+		   </aside>
+		   
+{% endblock %}
+
 {%- block seo -%}
     <!-- Facebook OpenGraph -->
     <meta property="og:site_name" content="{{ site.title }}">
