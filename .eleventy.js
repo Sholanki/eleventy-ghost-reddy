@@ -272,6 +272,7 @@ module.exports = function(config) {
     config.addCollection("notes", function (collection) {
         return collection.getFilteredByGlob(["src/notes/**/*.md", "index.md"]);
     });
+	let handlebars = require("handlebars");
     config.setLibrary("hbs", handlebars);
     config.addPassthroughCopy('assets');
 
