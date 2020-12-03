@@ -272,7 +272,7 @@ module.exports = function(config) {
     config.addCollection("notes", function (collection) {
         return collection.getFilteredByGlob(["src/notes/**/*.md", "index.md"]);
     });
-    
+    config.setLibrary("hbs", handlebars);
     config.addPassthroughCopy('assets');
 
     // Eleventy configuration
@@ -284,7 +284,7 @@ module.exports = function(config) {
         },
 
         // Files read by Eleventy, add as needed
-        templateFormats: ["css", "js", "njk", "md", "txt"],
+        templateFormats: ["css", "js", "njk", "md", "txt", "hbs"],
         htmlTemplateEngine: "njk",
         markdownTemplateEngine: "njk",
         passthroughFileCopy: true
