@@ -24,9 +24,9 @@
 	<aside class="read-next outer">
     <div class="inner">
         <div class="read-next-feed">
-            {{#if primary_tag}}
-            {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
-                {{#if related_posts}}
+            {{if primary_tag}}
+            {{get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
+                {{if related_posts}}
                 <article class="read-next-card">
                     <header class="read-next-card-header">
                         {{#../primary_tag}}
