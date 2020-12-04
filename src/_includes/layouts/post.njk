@@ -96,6 +96,17 @@
 	<div>
 {% include "layouts/subscript.html" %}
 </div>
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            {% if post.primary_tag %}
+			<section class="post-full-tags">
+			<a href="/tag/{{ post.primary_tag.slug }}+id:-{{id}}/">{{ post.primary_tag.name }}</a>
+             </section>
+                {% endif %}
+		</div>
+	</div>
+</aside>
 
 {% endblock %}
 
