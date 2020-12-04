@@ -103,7 +103,7 @@
             {% if post.primary_tag %}
 			<section class="post-full-tags">
 			<a href="/tag/{{ post.primary_tag.slug }}+id:-{{id}}/">{{ post.primary_tag.name }}</a>
-				{% if post.related_posts %}
+				
 					<article class="read-next-card">
 						<header class="read-next-card-header">
 							<h3><span>More in</span> <a href="{{url}}">{{post.primary_tag.name}}</a></h3>
@@ -121,7 +121,7 @@
 							</ul>
 						</div>
 					</article>
-				{% endif %}
+				
              </section>
              {% endif %}
 		</div>
