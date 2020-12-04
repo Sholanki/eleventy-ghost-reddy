@@ -1880,5 +1880,18 @@ a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,canvas,cap
         opacity: 1.0;
     }
 }
+#bottomHeader {
+    height:2px;
+    position: relative;
+    top:0px;
+    left: -5vw;
+	}
+
+	.reading-progress-bar {
+		display: block;
+		position: absolute;
+		width: 100vw;
+		
+	}
     
 /*# sourceMappingURL=screen.css.map */
