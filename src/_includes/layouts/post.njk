@@ -124,6 +124,9 @@
 				
              </section>
              {% endif %}
+             {% set cls = cycler(post in collections.post) %}
+				<div class="{{ cls.next() }}">{% extends 'layouts/default.njk' %}
+				{% from "partials/card.njk" import card %}</div>
 		</div>
 	</div>
 </aside>
