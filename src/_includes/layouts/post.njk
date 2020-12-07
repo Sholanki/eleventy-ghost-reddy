@@ -102,7 +102,7 @@
         <div class="read-next-feed">
             {% if post.primary_tag %}
 			<section class="post-full-tags">
-			<a href="/tag/{{ post.primary_tag.slug }}+id:-{{id}}/">{{ post.primary_tag.name }}</a>
+			
 				
 					<article class="read-next-card">
 						<header class="read-next-card-header">
@@ -127,7 +127,7 @@
              </section>
              {% endif %}
 			 {% for post in collections.post %}
-				<div>{% extends 'layouts/default.njk' %}
+				<div class="{{ post.next() }}">{% extends 'layouts/default.njk' %}
 				{% from "partials/card.njk" import card %}
 				{% set title = "Posts" %}
 
