@@ -128,7 +128,24 @@
              {% endif %}
 			 {% for post in collections.post %}
 				<div class="{{ post.next() }}">{% extends 'layouts/default.njk' %}
-				{% from "partials/card.njk" import card %}</div>
+				{% from "partials/card.njk" import card %}
+				{% set title = "Posts" %}
+
+				{% block header %}
+					{% include "partials/header-home.njk" %}
+				{% endblock %}
+
+				{% block content %}
+					<section class="post-feed">
+						{% for post in posts %}
+							{{ card(post, loop.index0) }}
+						{% endfor %}
+					</section>
+				{% endblock %}
+
+				{% block scripts %}
+					{% include "partials/scripts-scroll.njk" %}
+				{% endblock %} </div>
 			{% endfor %}
 			
 		</div>
