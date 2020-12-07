@@ -131,11 +131,11 @@
 				{% from "partials/card.njk" import card %}
 				{% set title = "Posts" %}
 
-				{% block header %}
+				{% block header post  %} 
 					{% include "partials/header-home.njk" %}
 				{% endblock %}
 
-				{% block content %}
+				{% block content post %}
 					<section class="post-feed">
 						{% for post in posts %}
 							{{ card(post, loop.index0) }}
