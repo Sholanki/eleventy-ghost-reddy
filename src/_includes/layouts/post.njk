@@ -127,7 +127,7 @@
              </section>
              {% endif %}
 			 {% for post in collections.post %}
-				<div class="{{ post.next() }}">{% extends 'layouts/default.njk' %}
+				<div>{% extends 'layouts/default.njk' %}
 				{% from "partials/card.njk" import card %}
 				{% set title = "Posts" %}
 
