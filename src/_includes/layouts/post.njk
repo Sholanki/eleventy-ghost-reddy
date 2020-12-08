@@ -135,7 +135,9 @@
 				{% from "partials/card.njk" import card %}
 				{% set title = "Posts" %}
 
-				
+				{% block header_post  %} 
+					{% include "partials/header-home.njk" %}
+				{% endblock %}
 
 				{% block content_post %}
 					<section class="post-feed">
