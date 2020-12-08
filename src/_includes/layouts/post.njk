@@ -141,7 +141,7 @@
 
 				{% block content_post %}
 					<section class="post-feed">
-						{% for post in collection.posts %}
+						{% for post in collections.posts %}
 							{{ card(post, loop.index0) }}
 						{% endfor %}
 					</section>
