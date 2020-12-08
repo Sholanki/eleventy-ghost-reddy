@@ -111,7 +111,7 @@
 						<div class="read-next-card-content">
 							<ul>
 								{% for post in collections.posts %}
-									{% if post.post-full-title %}
+									{% if {{post.title}} in page.url %}
 										<li></li>
 									{% else %}
 									
