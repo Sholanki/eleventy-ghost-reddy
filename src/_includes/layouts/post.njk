@@ -111,7 +111,7 @@
 						<div class="read-next-card-content">
 							<ul>
 								{% for post in collections.posts %}
-									{% if post.title in post.url %}
+									{% if post.title in "{{post.url}}+id:-{{id}}" %}
 										<li></li>
 									{% else %}
 									
@@ -142,7 +142,7 @@
 				{% block content_post %}
 					<section class="post-feed">
 						{% for post in posts %}
-							{{ card(post, loop.index1) }}
+							{{ card(post, loop.index2) }}
 						{% endfor %}
 					</section>
 				{% endblock %}
