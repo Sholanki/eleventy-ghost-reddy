@@ -111,14 +111,17 @@
 						<div class="read-next-card-content">
 							<ul>
 								{% for post in collections.posts %}
+									{% if post.post-full-title %}
+										<li></li>
+									{% else %}
 									
 									<li>
-										<h4><a href="{{post.url}}+id:-{{post.index}}">{{post.title}}</a></h4>
+										<h4><a href="{{post.url}}+id:-{{id}}">{{post.title}}</a></h4>
 										<div class="read-next-card-meta">
 											<p><time datetime="{% formatDate post.published_at, "ISO" %}">{% formatDate post.published_at, "D MMM YYYY" %}</time> <span class="bull">&bull;</span> {{ post.html | safe | getReadingTime }} min read </p>
 										</div>
 									</li>
-									
+									{% endif %}
 								{% endfor %}
 							</ul>
 						</div>
