@@ -131,7 +131,7 @@
              {% endif %}
 			 
 				<div>
-				{% extends 'layouts/default.njk' %}
+				{% extends 'layouts/post.njk' %}
 				{% from "partials/card.njk" import card %}
 				{% set title = "Posts" %}
 
@@ -141,7 +141,7 @@
 
 				{% block content_post %}
 					<section class="post-feed">
-						{% for post in posts %}
+						{% for post in collections.posts %}
 							{{ card(post, loop.index1) }}
 						{% endfor %}
 						
