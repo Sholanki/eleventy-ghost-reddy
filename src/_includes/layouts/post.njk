@@ -1,9 +1,7 @@
----
 pagination:
   data: collections.posts
   size: 20
   alias: posts
----
 
 {% extends 'layouts/default.njk' %}
 
@@ -138,7 +136,7 @@ pagination:
              {% endif %}
 			 
 				<div>
-				{% extends 'layouts/default.njk' %}
+				{% extends 'layouts/post.njk' %}
 				{% from "partials/card.njk" import card %}
 				{% set title = "Posts" %}
 
@@ -148,17 +146,15 @@ pagination:
 
 				{% block content_post %}
 					<section class="post-feed">
-					
-						{% for post in posts %}
-							{% if post.url in page.url %}
-								{{ card(post.next) }}
-							{% else %}
-							{% endif %}
+					{% if post.posts %}
+						{% for post in post.posts %}
+							{{ card(post.next-card) }}
 						{% endfor %}
-					
+					{% else %}
 						
-				
+					{% endif %}
 		
+						
 						
 					</section>
 				{% endblock %}
