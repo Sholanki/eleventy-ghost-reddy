@@ -62,8 +62,11 @@
             {% block header %}
                 {% include "partials/header.njk" %}
             {% endblock %}
-               <div id="bottomHeader">
-            <div class="reading-progress-bar"><h2 class="reading-bar" style="color:white;"> This is intro </h2></progress>
+               <div id="bottomHeader" style="position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 30px;">
+            <div class="reading-progress-bar"><h2 class="reading-bar" style="color:white; background:black; "> This is intro </h2></progress>
      </div>
 	 </div>
             <main id="site-main" class="site-main outer">
