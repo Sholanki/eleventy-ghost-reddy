@@ -142,7 +142,10 @@
 				{% block content_post %}
 					<section class="post-feed">
 						{% for post in collections.posts %}
+						{% if post.url in page.url %}
 							{{ card(post, loop.index1) }}
+						{% else %}
+							{% endif %}
 						{% endfor %}
 						
 					</section>
