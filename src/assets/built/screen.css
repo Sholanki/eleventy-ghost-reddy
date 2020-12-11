@@ -1889,17 +1889,18 @@ a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,canvas,cap
         width: 75%;
     
 	}
- @media screen and (max-width: 320px) {
+  @media (max-width:500px){
   
   .bottomHeader {
   width: 90%;
   display: block; /* Stops it from floating */
   margin: auto; /* Ensures that it is centered */
   margin-bottom: 25px; /* Space between the stacked elements */
+      }
     
   }
      
-     @media screen and (max-width: 320px) {
+   @media (max-width:500px){
   
   .imgclass {
   width: 90%;
@@ -1907,7 +1908,8 @@ a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,canvas,cap
   margin: auto; /* Ensures that it is centered */
   margin-bottom: 25px; /* Space between the stacked elements */
     
-  }
+      }
+        }
 
 	.reading-progress-bar {
 		margin: 0;
