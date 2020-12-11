@@ -275,6 +275,7 @@ module.exports = function(config) {
 	let handlebars = require("handlebars");
     config.setLibrary("hbs", handlebars);
     config.addPassthroughCopy('assets');
+config.addPassthroughCopy('img');
 
     // Eleventy configuration
     return {
@@ -285,7 +286,7 @@ module.exports = function(config) {
         },
 
         // Files read by Eleventy, add as needed
-        templateFormats: ["css", "js", "njk", "md", "txt", "hbs"],
+        templateFormats: ["css", "js", "njk", "md", "txt", "hbs", "jpg", "png"],
         htmlTemplateEngine: "njk",
         markdownTemplateEngine: "njk",
         passthroughFileCopy: true
