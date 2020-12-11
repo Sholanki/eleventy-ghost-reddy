@@ -1891,7 +1891,7 @@ a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,canvas,cap
 	}
  @media screen and (max-width: 320px) {
   
-  .reading-progress-bar {
+  .bottomHeader {
   width: 90%;
   display: block; /* Stops it from floating */
   margin: auto; /* Ensures that it is centered */
