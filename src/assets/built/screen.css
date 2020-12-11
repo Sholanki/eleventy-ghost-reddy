@@ -1883,25 +1883,18 @@ a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,canvas,cap
 }
 #bottomHeader {
     
-    position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  background-color: black;
-  padding: 10px;
+   color: black;
     
 	}
 
 	.reading-progress-bar {
-		display: block;
-		width: 100vw;
-        position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  background-color: black;
-  padding: 10px;
-        height:2px;
-    top:0px;
-    left: -5vw;
+		margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: black;
 		
 	}
     
