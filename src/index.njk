@@ -8,6 +8,15 @@ pagination:
 {% extends 'layouts/default.njk' %}
 {% from "partials/card.njk" import card %}
 
+ 
+
+{% set title = "Posts" %}
+
+{% block header %}
+    {% include "partials/header-home.njk" %}
+{% endblock %}
+
+
  <div class="reading-progress-bar" style="
         margin: 0;
         padding: 0;
@@ -20,13 +29,6 @@ pagination:
     "><h2 id="bottomHeader" style="color:#fff;float: left;width: 75%;">This is introduction text. Hello My name is Dr. Ritesh Reddy. I write for my personal catharsis, but eventually, some of it percolates into this daily newsletter and blog. I believe in the power of play as a medium of learning and growth. And if you don’t believe that, it’s at least sure to make you enjoy this vast ocean of infinite experience we’re swimming through. Come on in, the water’s just fine. Let’s play!
 
  </h2> <img src="/img/ritesh-reddy.jpg" style="display: inline-block;float: left;width: 20%;" /> </div>
- 
-
-{% set title = "Posts" %}
-
-{% block header %}
-    {% include "partials/header-home.njk" %}
-{% endblock %}
 
 {% block content %}
     <section class="post-feed">
