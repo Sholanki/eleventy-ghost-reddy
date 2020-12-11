@@ -1881,14 +1881,27 @@ a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,canvas,cap
         opacity: 1.0;
     }
 }
-#bottomHeader {
+.bottomHeader {
     
-   color: black;
+   background: black;
+    color:#fff;
+        float: left;
+        width: 75%;
     
 	}
  @media screen and (max-width: 320px) {
   
-  #bottomheader {
+  .reading-progress-bar {
+  width: 90%;
+  display: block; /* Stops it from floating */
+  margin: auto; /* Ensures that it is centered */
+  margin-bottom: 25px; /* Space between the stacked elements */
+    
+  }
+     
+      @media screen and (max-width: 320px) {
+  
+  .bottomHeader{
   width: 90%;
   display: block; /* Stops it from floating */
   margin: auto; /* Ensures that it is centered */
@@ -1904,6 +1917,9 @@ a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,canvas,cap
         font-size: 100%;
         vertical-align: baseline;
         background: black;
+        color:#fff;
+        float: left;
+        width: 75%;
 		
 	}
      
