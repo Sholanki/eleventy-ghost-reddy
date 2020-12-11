@@ -1906,5 +1906,11 @@ a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,canvas,cap
         background: black;
 		
 	}
+     
+     .imgclass{
+         display:inline-block;
+         float:left;
+         width: 20%;
+     }
     
 /*# sourceMappingURL=screen.css.map */
